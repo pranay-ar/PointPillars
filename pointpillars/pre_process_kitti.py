@@ -8,7 +8,7 @@ import sys
 CUR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(CUR)
 
-from utils import read_points, write_points, read_calib, read_label, \
+from pointpillars.utils import read_points, write_points, read_calib, read_label, \
     write_pickle, remove_outside_points, get_points_num_in_bbox, \
     points_in_bboxes_v2
 

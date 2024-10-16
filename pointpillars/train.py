@@ -4,10 +4,10 @@ import torch
 from tqdm import tqdm
 import pdb
 
-from utils import setup_seed
-from dataset import Kitti, get_dataloader
-from model import PointPillars
-from loss import Loss
+from pointpillars.utils import setup_seed
+from pointpillars.dataset import Kitti, get_dataloader
+from pointpillars.model import PointPillars
+from pointpillars.loss import Loss
 from torch.utils.tensorboard import SummaryWriter
 
 
