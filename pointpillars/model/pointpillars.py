@@ -334,7 +334,11 @@ class PointPillars(nn.Module):
 
         # 4. filter some bboxes if bboxes number is above self.max_num
         if len(ret_bboxes) == 0:
-            return [], [], []
+            return {
+                'lidar_bboxes': np.zeros((0, 7), dtype=np.float32),
+                'labels': np.zeros((0,), dtype=np.int64),
+                'scores': np.zeros((0,), dtype=np.float32),
+            }
         ret_bboxes = torch.cat(ret_bboxes, 0)
         ret_labels = torch.cat(ret_labels, 0)
         ret_scores = torch.cat(ret_scores, 0)
